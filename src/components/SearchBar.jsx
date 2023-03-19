@@ -15,8 +15,8 @@ export function SearchBar({ handleSearch }) {
 
   return (
     <S.SearchElement onSubmit={handleSubmit}>
-      <input type="text" value={query} onChange={handleChange} placeholder="Search..." />
-      <button type="submit">Search</button>
+      <S.SearchInput type="text" value={query} onChange={handleChange} placeholder="Search..." />
+      <S.SearchButton type="submit">Search</S.SearchButton>
     </S.SearchElement>
   );
 }

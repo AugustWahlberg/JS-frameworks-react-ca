@@ -7,7 +7,6 @@ export const Container = styled.div`
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: center;
-  padding: 0;
 `;
 
 export const ProductTitle = styled.h2 `

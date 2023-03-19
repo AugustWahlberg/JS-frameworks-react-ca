@@ -24,9 +24,17 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLink = styled.p`
+export const NavLink = styled.a`
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
+  margin: 10px;
+  padding: 0 20px;
+
+  &.active {
+    text-decoration: underline;
+
+  }
 
   &:hover {
     text-decoration: underline;
