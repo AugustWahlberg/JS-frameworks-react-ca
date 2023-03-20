@@ -7,6 +7,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  margin: -8px;
 `;
 
 export const NavList = styled.ul`

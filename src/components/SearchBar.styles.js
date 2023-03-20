@@ -5,7 +5,7 @@ export const SearchElement = styled.form`
  display: flex;
  margin: 0 auto;
  justify-content: center;
- margin-top: 10px;
+ margin-top: 20px;
 `;
 
 export const SearchInput = styled.input`
@@ -21,4 +21,8 @@ padding: 8px 24px 8px 16px;
 background-color: #90EE90;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 cursor: pointer;
+
+& > svg {
+  font-size: 18px;
+}
 `

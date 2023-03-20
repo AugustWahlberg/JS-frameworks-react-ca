@@ -64,10 +64,8 @@ export const AddBtn = styled(BaseButton)`
 export const ViewBtn = styled(BaseButton)`
   background-color: #ece75f;
   padding: 8px 14px 8px 16px;
+  text-decoration: none;
 `;
-
-
-
 
 export const ProductImg = styled.img `
  width: 100%;
@@ -80,6 +78,9 @@ export const ProductImg = styled.img `
 
 export const ButtonWrapper = styled.div`
 display: block;
+& > a {
+  text-decoration: none;
+}
 `
 
 export const Details = styled.div`

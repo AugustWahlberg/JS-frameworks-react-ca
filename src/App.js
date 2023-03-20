@@ -5,6 +5,7 @@ import Contact from './pages/Contact';
 import { Route, Routes } from "react-router-dom"
 
 function App() {  
+  
   return ( <>
   <NavBar />
   <div className="container"> 
