@@ -60,28 +60,28 @@ export function Product() {
   </S.AddBtn>
 </S.Wrapper>
 
-          <S.ReviewButton onClick={toggleReviews}>
-            {showReviews ? 'Hide Reviews' : 'Show Reviews'}
-            {showReviews ? (
-              <S.ChevronUpIcon />
-            ) : (
-              <S.ChevronDownIcon />
-            )}
-          </S.ReviewButton>
+{post.reviews.length > 0 && (
+  <>
+    <S.ReviewButton onClick={toggleReviews}>
+      {showReviews ? 'Hide Reviews' : 'Show Reviews'}
+      {showReviews ? <S.ChevronUpIcon /> : <S.ChevronDownIcon />}
+    </S.ReviewButton>
+    {showReviews && (
+      <S.ReviewsWrapper>
+        {post.reviews.map((review) => (
+          <S.Review key={review.id}>
+            <S.Username>{review.username}</S.Username>
+            <S.UserRating>
+              {review.rating} / 5 <span> <AiFillStar /></span>
+            </S.UserRating>
+            <S.Description>"{review.description}"</S.Description>
+          </S.Review>
+        ))}
+      </S.ReviewsWrapper>
+    )}
+  </>
+)}
 
-          {showReviews && (
-            <S.ReviewsWrapper>
-              {post.reviews.map((review) => (
-                <S.Review key={review.id}>
-                  <S.Username>{review.username}</S.Username>
-                  <S.UserRating>
-                    {review.rating} / 5 <span> <AiFillStar /></span>
-                  </S.UserRating>
-                  <S.Description>"{review.description}"</S.Description>
-                </S.Review>
-              ))}
-            </S.ReviewsWrapper>
-          )}
         </S.Box>
       </S.Container>
     </div>
