@@ -6,7 +6,7 @@ export const Form = styled.form`
   max-width: 500px;
   margin: 2rem auto;
   padding: 2rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   
 `;
 
@@ -35,6 +35,24 @@ export const TextArea = styled.textarea`
   max-width: 100%;
   cursor: text;
 `;
+
+export const ContactTitle = styled.h1 `
+  font-size: 28px;
+  margin: 30px auto;
+  display: block;
+  width: 100%;
+  text-align: center;
+`;
+
+export const ContactBody = styled.p `
+font-size: 18px;
+display: block;
+max-width: 500px;
+margin: 2rem auto;
+padding: 2rem;
+box-shadow: 0 0 10px rgba(236, 231, 95, 0.8);
+line-height: 1.6em;
+`
 
 export const Button = styled.button`
   padding: 12px 16px;

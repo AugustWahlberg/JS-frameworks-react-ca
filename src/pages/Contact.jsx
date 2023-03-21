@@ -26,7 +26,13 @@ function Contact() {
 
   return (
     <div>
-      <h2>Contact Us</h2>
+      <S.ContactTitle>Contact Us</S.ContactTitle>
+      <S.ContactBody>Thank you for your interest in our website!
+         We would love to hear from you and answer any questions you may have.
+          Whether you have a suggestion for improving our site, need help with a purchase, or simply want to say hello, 
+          please don't hesitate to reach out. Our friendly customer support team is always here to assist you. 
+          We look forward to hearing from you!</S.ContactBody>
+      
       <S.Form onSubmit={handleSubmit}>
         <S.Label htmlFor="fullName">Full Name</S.Label>
         <S.Input
