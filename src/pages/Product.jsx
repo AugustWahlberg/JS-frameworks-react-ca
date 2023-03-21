@@ -35,8 +35,9 @@ export function Product() {
             </S.ProductTags>
 
             <S.Rating>
-              {post.rating} / 5 <span> <AiFillStar /></span>
-            </S.Rating>
+  {post.reviews.length > 0 ? `${post.rating} / 5` : `? / 5`}
+  <span> <AiFillStar /></span>
+</S.Rating>
           </S.Wrapper>
 
           <S.ProductDescription>{post.description}</S.ProductDescription>
