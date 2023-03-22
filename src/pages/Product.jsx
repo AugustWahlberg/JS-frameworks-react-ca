@@ -4,7 +4,7 @@ import { usePost } from '../api/GetProduct';
 import * as S from './Product.Styles';
 import { AiFillStar } from 'react-icons/ai';
 import { BsCartPlusFill } from 'react-icons/bs';
-import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
+
 
 
 export function Product() {
