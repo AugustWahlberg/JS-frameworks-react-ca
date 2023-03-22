@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Form = styled.form`
   display: flex;
@@ -7,7 +7,6 @@ export const Form = styled.form`
   margin: 2rem auto;
   padding: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  
 `;
 
 export const Label = styled.label`
@@ -36,7 +35,7 @@ export const TextArea = styled.textarea`
   cursor: text;
 `;
 
-export const ContactTitle = styled.h1 `
+export const ContactTitle = styled.h1`
   font-size: 28px;
   margin: 30px auto;
   display: block;
@@ -44,28 +43,28 @@ export const ContactTitle = styled.h1 `
   text-align: center;
 `;
 
-export const ContactBody = styled.p `
-font-size: 18px;
-display: block;
-max-width: 500px;
-margin: 2rem auto;
-padding: 2rem;
-box-shadow: 0 0 10px rgba(236, 231, 95, 0.8);
-line-height: 1.6em;
-`
+export const ContactBody = styled.p`
+  font-size: 18px;
+  display: block;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(236, 231, 95, 0.8);
+  line-height: 1.6em;
+`;
 
 export const Button = styled.button`
   padding: 12px 16px;
-  background-color: #90EE90;
+  background-color: #90ee90;
   border: none;
   border-radius: 4px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  
+
   :hover {
     background-color: black;
     color: white;
-  }  
+  }
 `;

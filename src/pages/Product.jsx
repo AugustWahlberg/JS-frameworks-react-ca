@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { usePost } from '../api/GetProduct';
-import * as S from './Product.Styles';
-import { AiFillStar } from 'react-icons/ai';
-import { BsCartPlusFill } from 'react-icons/bs';
-
-
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+import { usePost } from "../api/GetProduct";
+import * as S from "./Product.Styles";
+import { AiFillStar } from "react-icons/ai";
+import { BsCartPlusFill } from "react-icons/bs";
 
 export function Product() {
   const { id } = useParams();
@@ -35,54 +33,63 @@ export function Product() {
             </S.ProductTags>
 
             <S.Rating>
-  {post.reviews.length > 0 ? `${post.rating} / 5` : `? / 5`}
-  <span> <AiFillStar /></span>
-</S.Rating>
+              {post.reviews.length > 0 ? `${post.rating} / 5` : `? / 5`}
+              <span>
+                {" "}
+                <AiFillStar />
+              </span>
+            </S.Rating>
           </S.Wrapper>
 
           <S.ProductDescription>{post.description}</S.ProductDescription>
 
-
           <S.Wrapper>
-  <div>
-    {post.discountedPrice < post.price ? (
-      <>
-        <S.PriceDisplay style={{ textDecoration: 'line-through' }}>
-          {post.price} $
-        </S.PriceDisplay>
-        <S.PriceDisplay>{post.discountedPrice} $</S.PriceDisplay>
-      </>
-    ) : (
-      <S.PriceDisplay>{post.price} $</S.PriceDisplay>
-    )}
-  </div>
-  <S.AddBtn>
-    <span> <BsCartPlusFill /></span> Add to Cart
-  </S.AddBtn>
-</S.Wrapper>
+            <div>
+              {post.discountedPrice < post.price ? (
+                <>
+                  <S.PriceDisplay style={{ textDecoration: "line-through" }}>
+                    {post.price} $
+                  </S.PriceDisplay>
+                  <S.PriceDisplay>{post.discountedPrice} $</S.PriceDisplay>
+                </>
+              ) : (
+                <S.PriceDisplay>{post.price} $</S.PriceDisplay>
+              )}
+            </div>
+            <S.AddBtn>
+              <span>
+                {" "}
+                <BsCartPlusFill />
+              </span>{" "}
+              Add to Cart
+            </S.AddBtn>
+          </S.Wrapper>
 
-{post.reviews.length > 0 && (
-  <>
-    <S.ReviewButton onClick={toggleReviews}>
-      {showReviews ? 'Hide Reviews' : 'Show Reviews'}
-      {showReviews ? <S.ChevronUpIcon /> : <S.ChevronDownIcon />}
-    </S.ReviewButton>
-    {showReviews && (
-      <S.ReviewsWrapper>
-        {post.reviews.map((review) => (
-          <S.Review key={review.id}>
-            <S.Username>{review.username}</S.Username>
-            <S.UserRating>
-              {review.rating} / 5 <span> <AiFillStar /></span>
-            </S.UserRating>
-            <S.Description>"{review.description}"</S.Description>
-          </S.Review>
-        ))}
-      </S.ReviewsWrapper>
-    )}
-  </>
-)}
-
+          {post.reviews.length > 0 && (
+            <>
+              <S.ReviewButton onClick={toggleReviews}>
+                {showReviews ? "Hide Reviews" : "Show Reviews"}
+                {showReviews ? <S.ChevronUpIcon /> : <S.ChevronDownIcon />}
+              </S.ReviewButton>
+              {showReviews && (
+                <S.ReviewsWrapper>
+                  {post.reviews.map((review) => (
+                    <S.Review key={review.id}>
+                      <S.Username>{review.username}</S.Username>
+                      <S.UserRating>
+                        {review.rating} / 5{" "}
+                        <span>
+                          {" "}
+                          <AiFillStar />
+                        </span>
+                      </S.UserRating>
+                      <S.Description>"{review.description}"</S.Description>
+                    </S.Review>
+                  ))}
+                </S.ReviewsWrapper>
+              )}
+            </>
+          )}
         </S.Box>
       </S.Container>
     </div>

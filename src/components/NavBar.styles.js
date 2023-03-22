@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Nav = styled.nav`
   background-color: #333;
@@ -34,7 +34,6 @@ export const NavLink = styled.a`
 
   &.active {
     text-decoration: underline;
-
   }
 
   &:hover {

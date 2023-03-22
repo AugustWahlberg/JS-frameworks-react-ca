@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export function usePosts() {
-  const url = 'https://api.noroff.dev/api/v1/online-shop';
+  const url = "https://api.noroff.dev/api/v1/online-shop";
 
   const [posts, setPosts] = useState([]);
 

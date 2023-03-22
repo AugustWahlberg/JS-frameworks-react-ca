@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import * as S from './Home.Styles';
-import { AiFillStar, AiFillEye } from 'react-icons/ai';
-import { BsCartPlusFill } from 'react-icons/bs';
-import { SearchBar } from '../components/SearchBar';
-import { Link } from 'react-router-dom';
-import { usePosts } from '../api/getPosts';
+import React, { useState } from "react";
+import * as S from "./Home.Styles";
+import { AiFillStar, AiFillEye } from "react-icons/ai";
+import { BsCartPlusFill } from "react-icons/bs";
+import { SearchBar } from "../components/SearchBar";
+import { Link } from "react-router-dom";
+import { usePosts } from "../api/getPosts";
 
-import { PriceDisplay, PriceDisplayDiscount } from './Home.Styles';
+import { PriceDisplay, PriceDisplayDiscount } from "./Home.Styles";
 
 function Home() {
   const posts = usePosts();
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearch = (query) => {
     setSearchTerm(query);
@@ -31,31 +31,40 @@ function Home() {
 
             <S.DetailsWrapper>
               <S.Details>
-              {post.discountedPrice !== post.price ? (
-  <PriceDisplay discounted>
-    {post.discountedPrice} $
-  </PriceDisplay>
-) : (
-  <PriceDisplay>{post.price} $</PriceDisplay>
-)}
+                {post.discountedPrice !== post.price ? (
+                  <PriceDisplay discounted>
+                    {post.discountedPrice} $
+                  </PriceDisplay>
+                ) : (
+                  <PriceDisplay>{post.price} $</PriceDisplay>
+                )}
 
                 <S.Rating>
-                  {post.reviews.length > 0
-                    ? `${post.rating} / 5`
-                    : `? / 5`}{' '}
-                  <span> <AiFillStar /></span>{' '}
+                  {post.reviews.length > 0 ? `${post.rating} / 5` : `? / 5`}{" "}
+                  <span>
+                    {" "}
+                    <AiFillStar />
+                  </span>{" "}
                 </S.Rating>
               </S.Details>
 
               <S.ButtonWrapper>
                 <Link to={`/product/${post.id}`}>
                   <S.ViewBtn>
-                    <span> <AiFillEye /></span> View Product
+                    <span>
+                      {" "}
+                      <AiFillEye />
+                    </span>{" "}
+                    View Product
                   </S.ViewBtn>
                 </Link>
 
                 <S.AddBtn>
-                  <span> <BsCartPlusFill /></span> Add to Cart
+                  <span>
+                    {" "}
+                    <BsCartPlusFill />
+                  </span>{" "}
+                  Add to Cart
                 </S.AddBtn>
               </S.ButtonWrapper>
             </S.DetailsWrapper>

@@ -1,21 +1,19 @@
-
-import React, { useState } from 'react';
-import * as S from './Contact.Styles';
-
+import React, { useState } from "react";
+import * as S from "./Contact.Styles";
 
 function Contact() {
   const [formState, setFormState] = useState({
-    fullName: '',
-    subject: '',
-    email: '',
-    body: ''
+    fullName: "",
+    subject: "",
+    email: "",
+    body: "",
   });
 
   function handleChange(event) {
     const { name, value } = event.target;
-    setFormState(prevState => ({
+    setFormState((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   }
 
@@ -27,12 +25,14 @@ function Contact() {
   return (
     <div>
       <S.ContactTitle>Contact Us</S.ContactTitle>
-      <S.ContactBody>Thank you for your interest in our website!
-         We would love to hear from you and answer any questions you may have.
-          Whether you have a suggestion for improving our site, need help with a purchase, or simply want to say hello, 
-          please don't hesitate to reach out. Our friendly customer support team is always here to assist you. 
-          We look forward to hearing from you!</S.ContactBody>
-      
+      <S.ContactBody>
+        Thank you for your interest in our website! We would love to hear from
+        you and answer any questions you may have. Whether you have a suggestion
+        for improving our site, need help with a purchase, or simply want to say
+        hello, please don't hesitate to reach out. Our friendly customer support
+        team is always here to assist you. We look forward to hearing from you!
+      </S.ContactBody>
+
       <S.Form onSubmit={handleSubmit}>
         <S.Label htmlFor="fullName">Full Name</S.Label>
         <S.Input
