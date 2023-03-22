@@ -7,15 +7,11 @@ export const Container = styled.div`
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: center;
+  max-width: 1800px;
 `;
 
 export const ProductTitle = styled.h2 `
 font-size: 18px;
-`
-
-export const PriceDisplay = styled.p `
-font-size: 15px;
-margin: 10px;
 `
 
 export const Rating = styled.p`
@@ -85,8 +81,20 @@ display: block;
 
 export const Details = styled.div`
 `
+
 export const DetailsWrapper = styled.div`
 display: flex;
 justify-content: space-between;
 align-self: center;
 `
+
+export const NotFound = styled.div`
+margin-top: 20px;
+`
+
+export const PriceDisplay = styled.p`
+  font-size: 15px;
+  margin: 10px;
+  font-weight: 600;
+  color: ${({ discounted }) => (discounted ? "#228b22" : "black")};
+`;
