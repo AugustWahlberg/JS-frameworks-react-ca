@@ -1,28 +1,22 @@
 import styled from "styled-components";
 
+
+
 export const SearchElement = styled.form`
-  width: 100%;
+  width: 320px;
   display: flex;
-  margin: 0 auto;
   justify-content: center;
-  margin-top: 40px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 99px;
 `;
 
 export const SearchInput = styled.input`
-  width: 200px;
-  padding: 8px 24px 8px 16px;
+  width: 320px;
+  padding: 10px;
   font-weight: 600;
   font-size: 16px;
   text-transform: uppercase;
-`;
-
-export const SearchButton = styled.button`
-  padding: 8px 24px 8px 16px;
-  background-color: #90ee90;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-
-  & > svg {
-    font-size: 18px;
-  }
 `;

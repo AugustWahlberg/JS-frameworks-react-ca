@@ -7,8 +7,12 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 5px;
   z-index: 1;
   width: fit-content;
   border-radius: 10px;
@@ -29,6 +33,7 @@ export const LinkContainer = styled.div`
   justify-content: center;
   padding: 10px;
   text-align: center;
+  cursor: pointer;
 
   &:nth-child(1) {
       border-top-left-radius: 10px;
@@ -47,9 +52,9 @@ export const LinkContainer = styled.div`
   }
 
   
-  &:hover {
+  &:hover  {
     background-color:black;
-    border: ehite solid 2px;
+    text-decoration: underline;
   }
 `;
 
