@@ -6,7 +6,6 @@ import { SearchBar } from "../components/SearchBar";
 import { Link } from "react-router-dom";
 import { usePosts } from "../api/getPosts";
 
-import { PriceDisplay, PriceDisplayDiscount } from "./Home.Styles";
 
 function Home() {
   const posts = usePosts();
@@ -22,9 +21,10 @@ function Home() {
 
   return (
     <div>
-      <SearchBar onSearchTermChange={handleSearch} />
-      <S.Container>
-        {filteredPosts.map((post) => (
+    <SearchBar onSearchTermChange={handleSearch} />
+    <S.Container>
+      {filteredPosts.length > 0 ? (
+        filteredPosts.map((post) => (
           <S.Box key={post.id}>
             <S.ProductImg src={post.imageUrl} alt="Logo" />
             <S.ProductTitle>{post.title}</S.ProductTitle>
@@ -32,11 +32,11 @@ function Home() {
             <S.DetailsWrapper>
               <S.Details>
                 {post.discountedPrice !== post.price ? (
-                  <PriceDisplay discounted>
+                  <S.PriceDisplay discounted>
                     {post.discountedPrice} $
-                  </PriceDisplay>
+                  </S.PriceDisplay>
                 ) : (
-                  <PriceDisplay>{post.price} $</PriceDisplay>
+                  <S.PriceDisplay>{post.price} $</S.PriceDisplay>
                 )}
 
                 <S.Rating>
@@ -69,9 +69,12 @@ function Home() {
               </S.ButtonWrapper>
             </S.DetailsWrapper>
           </S.Box>
-        ))}
-      </S.Container>
-    </div>
+        ))
+      ) : (
+        <S.NotFound>No results found</S.NotFound>
+      )}
+    </S.Container>
+  </div>
   );
 }
 

@@ -6,35 +6,67 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  margin: -8px;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: fit-content;
+  border-radius: 10px;
 `;
 
 export const NavList = styled.ul`
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 0px;
 `;
 
-export const NavItem = styled.li`
-  margin-left: 1rem;
+export const LinkContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
 
-  &:first-child {
-    margin-left: 0;
+  &:nth-child(1) {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    
+  }
+
+  &:nth-child(2) {
+    border-radius: 0px;
+  }
+
+  &:nth-child(3) {
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+    
+  }
+
+  
+  &:hover {
+    background-color:black;
+    border: ehite solid 2px;
   }
 `;
+
+export const Icon = styled.div`
+  font-size: 26px;
+  width: 100px;
+  margin: 0 auto;
+  margin: 10px 0px;
+`; 
+
 
 export const NavLink = styled.a`
   color: #fff;
   text-decoration: none;
   cursor: pointer;
-  margin: 10px;
   padding: 0 20px;
-
-  &.active {
-    text-decoration: underline;
-  }
+  display: flex;
 
   &:hover {
     text-decoration: underline;

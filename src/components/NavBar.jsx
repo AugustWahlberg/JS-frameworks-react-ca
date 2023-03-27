@@ -1,32 +1,33 @@
 import React from "react";
 import * as S from "./NavBar.styles";
+import { BsCartPlusFill } from 'react-icons/bs';
+import { ImHome } from 'react-icons/im';
+
+
+
+function CustomLink({ href, children, ...props }) {
+  const path = window.location.pathname;
+
+  const icon = href === '/home' ? <S.Icon as={ImHome} /> : <S.Icon as={BsCartPlusFill} />;
+
+  return (
+    <S.LinkContainer className={path === href ? "active" : ""}>
+      {icon}
+      <S.NavLink href={href} {...props}>
+        {children}
+      </S.NavLink>
+    </S.LinkContainer>
+  );
+}
 
 export function NavBar() {
   return (
     <S.Nav>
-      <S.NavLink a href="/">
-        Site Name
-      </S.NavLink>
       <S.NavList>
-        <CostumLink a href="/contact">
-          Contact
-        </CostumLink>
-        <CostumLink a href="/home">
-          Home
-        </CostumLink>
+        <CustomLink href="/contact">Contact</CustomLink>
+        <CustomLink href="/home">Home</CustomLink>
+        <CustomLink href="/cart">Cart</CustomLink>
       </S.NavList>
     </S.Nav>
-  );
-}
-
-function CostumLink({ href, children, ...props }) {
-  const path = window.location.pathname;
-
-  return (
-    <S.NavItem className={path === href ? "active" : ""}>
-      <S.NavLink a href={href} {...props}>
-        {children}
-      </S.NavLink>
-    </S.NavItem>
   );
 }

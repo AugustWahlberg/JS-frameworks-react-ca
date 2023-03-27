@@ -3,3 +3,7 @@
 #root {
   font-family: "Open Sans", sans-serif;
 }
+
+.active {
+background-color: black;
+}

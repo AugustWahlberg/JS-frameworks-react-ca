@@ -5,7 +5,7 @@ export const SearchElement = styled.form`
   display: flex;
   margin: 0 auto;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 40px;
 `;
 
 export const SearchInput = styled.input`
