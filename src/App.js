@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import { Route, Routes } from "react-router-dom";
 import { Product } from "./pages/Product";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/product/:id" element={<Product />} />
         </Routes>
       </div>
+      <Footer />
     </>
   );
 }
