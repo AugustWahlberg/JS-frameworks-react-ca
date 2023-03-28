@@ -23,62 +23,65 @@ function Contact() {
   }
 
   return (
-    <div>
-      <S.ContactTitle>Contact Us</S.ContactTitle>
-      <S.ContactBody>
-        Thank you for your interest in our website! We would love to hear from
-        you and answer any questions you may have. Whether you have a suggestion
-        for improving our site, need help with a purchase, or simply want to say
-        hello, please don't hesitate to reach out. Our friendly customer support
-        team is always here to assist you. We look forward to hearing from you!
-      </S.ContactBody>
+    <S.Container>
+      <div>
+        <S.ContactTitle>Contact Us</S.ContactTitle>
+        <S.ContactBody>
+          Thank you for your interest in our website! We would love to hear from
+          you and answer any questions you may have. Whether you have a
+          suggestion for improving our site, need help with a purchase, or
+          simply want to say hello, please don't hesitate to reach out. Our
+          friendly customer support team is always here to assist you. We look
+          forward to hearing from you!
+        </S.ContactBody>
 
-      <S.Form onSubmit={handleSubmit}>
-        <S.Label htmlFor="fullName">Full Name</S.Label>
-        <S.Input
-          type="text"
-          name="fullName"
-          id="fullName"
-          value={formState.fullName}
-          onChange={handleChange}
-          minLength="3"
-          required
-        />
+        <S.Form onSubmit={handleSubmit}>
+          <S.Label htmlFor="fullName">Full Name</S.Label>
+          <S.Input
+            type="text"
+            name="fullName"
+            id="fullName"
+            value={formState.fullName}
+            onChange={handleChange}
+            minLength="3"
+            required
+          />
 
-        <S.Label htmlFor="subject">Subject</S.Label>
-        <S.Input
-          type="text"
-          name="subject"
-          id="subject"
-          value={formState.subject}
-          onChange={handleChange}
-          minLength="3"
-          required
-        />
+          <S.Label htmlFor="subject">Subject</S.Label>
+          <S.Input
+            type="text"
+            name="subject"
+            id="subject"
+            value={formState.subject}
+            onChange={handleChange}
+            minLength="3"
+            required
+          />
 
-        <S.Label htmlFor="email">Email</S.Label>
-        <S.Input
-          type="email"
-          name="email"
-          id="email"
-          value={formState.email}
-          onChange={handleChange}
-          required
-        />
+          <S.Label htmlFor="email">Email</S.Label>
+          <S.Input
+            type="email"
+            name="email"
+            id="email"
+            value={formState.email}
+            onChange={handleChange}
+            required
+          />
 
-        <S.Label htmlFor="body">Message</S.Label>
-        <S.TextArea
-          name="body"
-          id="body"
-          value={formState.body}
-          onChange={handleChange}
-          minLength="3"
-          required
-        ></S.TextArea>
+          <S.Label htmlFor="body">Message</S.Label>
+          <S.TextArea
+            name="body"
+            id="body"
+            value={formState.body}
+            onChange={handleChange}
+            minLength="3"
+            required
+          ></S.TextArea>
 
-        <S.Button type="submit">Submit</S.Button>
-      </S.Form>
-    </div>
+          <S.Button type="submit">Submit</S.Button>
+        </S.Form>
+      </div>
+    </S.Container>
   );
 }
 

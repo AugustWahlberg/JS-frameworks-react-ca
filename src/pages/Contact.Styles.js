@@ -4,9 +4,20 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   max-width: 500px;
-  margin: 2rem auto;
+  margin: 3rem auto;
+  margin-bottom: 6rem;
   padding: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+`;
+
+export const Container = styled.div`
+  border: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px auto;
+  margin-top: 140px;
+  justify-content: center;
+  max-width: 1800px;
 `;
 
 export const Label = styled.label`
