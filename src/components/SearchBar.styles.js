@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 export const SearchElement = styled.form`
   width: 320px;
   display: flex;
