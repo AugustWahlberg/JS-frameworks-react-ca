@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Nav = styled.nav`
   background-color: #333;
@@ -35,27 +35,24 @@ export const LinkContainer = styled.div`
   text-align: center;
   cursor: pointer;
 
-  &:nth-child(1) {
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
-    
-  }
-
-  &:nth-child(2) {
-    border-radius: 0px;
-  }
-
-  &:nth-child(3) {
-      border-bottom-right-radius: 10px;
-      border-top-right-radius: 10px;
-    
-  }
-
-  
-  &:hover  {
-    background-color:black;
+  &:hover {
+    background-color: black;
     text-decoration: underline;
   }
+
+  ${(props) =>
+    props.left &&
+    css`
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    `}
+
+  ${(props) =>
+    props.right &&
+    css`
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    `}
 `;
 
 export const Icon = styled.div`
@@ -63,8 +60,7 @@ export const Icon = styled.div`
   width: 100px;
   margin: 0 auto;
   margin: 10px 0px;
-`; 
-
+`;
 
 export const NavLink = styled.a`
   color: #fff;
