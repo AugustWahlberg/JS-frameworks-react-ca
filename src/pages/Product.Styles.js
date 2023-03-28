@@ -41,10 +41,17 @@ export const Rating = styled.p`
   }
 `;
 
+export const Offer = styled.p`
+ font-size: 18px;
+  margin: 10px;
+  font-weight: 700;
+  color: #228b22 ;
+
+`
+
 export const Box = styled.div`
   width: 560px;
   padding: 20px;
-
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 `;
 

@@ -51,9 +51,18 @@ export function Product() {
                     {post.price} $
                   </S.PriceDisplay>
                   <S.PriceDisplay>{post.discountedPrice} $</S.PriceDisplay>
+                  <S.Offer>
+                    {calculateDiscountPercentage(
+                      post.price,
+                      post.discountedPrice
+                    )}
+                    % off
+                  </S.Offer>
                 </>
               ) : (
-                <S.PriceDisplay>{post.price} $</S.PriceDisplay>
+                <S.PriceDisplay>
+                  {post.price} - {post.discountedPrice} $
+                </S.PriceDisplay>
               )}
             </div>
             <S.AddBtn>
@@ -94,4 +103,9 @@ export function Product() {
       </S.Container>
     </div>
   );
+}
+
+function calculateDiscountPercentage(price, discountedPrice) {
+  const discountPercentage = ((price - discountedPrice) / price) * 100;
+  return Math.round(discountPercentage * 100) / 100; // round to two decimal places
 }
