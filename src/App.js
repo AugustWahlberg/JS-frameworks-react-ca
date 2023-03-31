@@ -4,11 +4,12 @@ import Contact from "./pages/Contact";
 import { Route, Routes } from "react-router-dom";
 import { Product } from "./pages/Product";
 import { Layout } from "./components/Layout";
-import { Cart } from "./pages/Cart";
+import { CartProvider } from "./components/CartContext"; // import CartProvider
+import { Cart } from "./pages/Cart"; // update import statement
 
 function App() {
   return (
-    <>
+    <CartProvider> {/* wrap the Routes component with CartProvider */}
       <Layout>
         <div className="container">
           <Routes>
@@ -19,7 +20,7 @@ function App() {
           </Routes>
         </div>
       </Layout>
-    </>
+    </CartProvider>
   );
 }
 

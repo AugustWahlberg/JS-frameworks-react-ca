@@ -57,14 +57,6 @@ function Home() {
                       View Product
                     </S.ViewBtn>
                   </Link>
-
-                  <S.AddBtn>
-                    <span>
-                      {" "}
-                      <BsCartPlusFill />
-                    </span>{" "}
-                    Add to Cart
-                  </S.AddBtn>
                 </S.ButtonWrapper>
               </S.DetailsWrapper>
             </S.Box>

@@ -4,11 +4,15 @@ import { usePost } from "../api/GetProduct";
 import * as S from "./Product.Styles";
 import { AiFillStar } from "react-icons/ai";
 import { BsCartPlusFill } from "react-icons/bs";
+import { useCart } from "../components/CartContext.jsx";
+
 
 export function Product() {
   const { id } = useParams();
   const post = usePost(id);
   const [showReviews, setShowReviews] = useState(false);
+
+  const { addToCart } = useCart();
 
   if (!post) {
     return <p>Loading...</p>;
@@ -65,13 +69,20 @@ export function Product() {
                 </S.PriceDisplay>
               )}
             </div>
-            <S.AddBtn>
-              <span>
-                {" "}
-                <BsCartPlusFill />
-              </span>{" "}
-              Add to Cart
-            </S.AddBtn>
+            <S.AddBtn
+  onClick={() => {
+    console.log(post); // Add this line to log the product object
+    addToCart(post);
+    
+  }}
+>
+  <span>
+    {" "}
+    <BsCartPlusFill />
+  </span>{" "}
+  Add to Cart
+</S.AddBtn>
+
           </S.Wrapper>
 
           {post.reviews.length > 0 && (
