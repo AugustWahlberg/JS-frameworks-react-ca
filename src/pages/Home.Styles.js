@@ -90,6 +90,7 @@ export const DetailsWrapper = styled.div`
 
 export const NotFound = styled.div`
   margin-top: 20px;
+  position: fixed;
 `;
 
 export const PriceDisplay = styled.p`
