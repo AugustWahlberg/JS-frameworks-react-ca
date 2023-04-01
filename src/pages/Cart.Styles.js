@@ -7,6 +7,7 @@ export const Container = styled.div`
   margin: 40px auto;
   margin-top: 140px;
   max-width: 1000px;
+  justify-content: center;
 `;
 
 export const CartItemsWrapper = styled.div`
@@ -140,4 +141,46 @@ export const CheckoutButton = styled.button`
     background-color: black;
     color: white;
   }
+`;
+
+export const EmptyCart = styled.div`
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+`;
+
+export const QuantityButtons = styled.div`
+  display: flex;
+  margin: 5px 0;
+`;
+
+export const QuantityWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const QuantityButton = styled.button`
+  background-color: #f1f1f1;
+  border: 1px solid #c1c1c1;
+  color: black;
+  padding: 5px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 3px;
+
+  :hover {
+    background-color: #e0e0e0;
+  }
+`;
+
+export const QuantityText = styled.span`
+  font-size: 14px;
+  padding: 0 5px;
 `;

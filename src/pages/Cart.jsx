@@ -39,7 +39,9 @@ export const Cart = () => {
           <CartItem key={product.id} product={product} />
         ))
       ) : (
+        <S.EmptyCart>
         <p>Your cart is empty</p>
+        </S.EmptyCart>
       )}
     </S.Container>
   );
