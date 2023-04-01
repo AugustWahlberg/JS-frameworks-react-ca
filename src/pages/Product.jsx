@@ -65,7 +65,7 @@ export function Product() {
                 </>
               ) : (
                 <S.PriceDisplay>
-                  {post.price} - {post.discountedPrice} $
+                  {post.price}$
                 </S.PriceDisplay>
               )}
             </div>

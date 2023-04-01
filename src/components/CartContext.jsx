@@ -6,15 +6,19 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
-    console.log("addToCart called with product: ", product);
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
-    console.log("existingCart: ", existingCart);
 
     existingCart.push(product);
     setCart(existingCart);
     localStorage.setItem("cart", JSON.stringify(existingCart));
+  };
 
-    console.log("Cart after adding product: ", existingCart); // Add this console log
+  const removeFromCart = (productId) => {
+    const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+    const updatedCart = existingCart.filter((product) => product.id !== productId);
+
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
   useEffect(() => {
@@ -24,7 +28,7 @@ export const CartProvider = ({ children }) => {
 
   console.log("CartProvider rendered");
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );

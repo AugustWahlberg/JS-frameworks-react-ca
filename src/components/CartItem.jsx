@@ -1,18 +1,41 @@
 import React from "react";
+import { useCart } from "./CartContext";
 import * as S from "../pages/Cart.Styles";
+import { Link } from "react-router-dom";
+import { AiFillEye } from "react-icons/ai";
+import { BsFillTrash3Fill } from "react-icons/bs";
 
-export const CartItem = (props) => {
-  const { product } = props;
+const CartItem = ({ product }) => {
+  const { removeFromCart } = useCart();
 
   return (
     <S.CartItem>
       <S.CartItemImg src={product.imageUrl} alt="product" />
       <S.CartItemInfo>
         <S.CartItemTitle>{product.title}</S.CartItemTitle>
-        <S.CartItemQuantity>Quantity: {product.quantity}</S.CartItemQuantity>
+        <S.CartItemText>Quantity: {product.quantity}</S.CartItemText>
+        <S.CartItemText>Price: {product.price}</S.CartItemText>
+        <S.CartBtnWrapper>
+        <Link to={`/product/${product.id}`}>
+          <S.CartActionButton bgColor="#ece75f">
+                        <span>
+                        {" "}
+                        <AiFillEye />
+                      </span>{" "}
+                      View
+          </S.CartActionButton>
+        </Link>
+        <S.CartActionButton bgColor="#FFB3B3" onClick={() => removeFromCart(product.id)}>
+                  <span>
+                        {" "}
+                        <BsFillTrash3Fill />
+                  </span>{" "}
+          Delete
+          </S.CartActionButton>
+        </S.CartBtnWrapper>
       </S.CartItemInfo>
     </S.CartItem>
   );
 };
 
-export default React.memo(CartItem);
+export default CartItem;
