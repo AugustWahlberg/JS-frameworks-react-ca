@@ -43,7 +43,6 @@ export function CustomLink({ href, children, ...props }) {
   );
 }
 
-
 export function NavBar() {
   return (
     <S.Nav>

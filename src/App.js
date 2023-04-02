@@ -14,12 +14,16 @@ function App() {
       <Layout>
         <div className="container">
           <Routes>
-          <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/product/:id" element={<Product />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout-success" element={<CheckoutSuccess />} /> {/* add new route */}
+            <Route
+              path="/checkout-success"
+              element={<CheckoutSuccess />}
+            />{" "}
+            {/* add new route */}
           </Routes>
         </div>
       </Layout>

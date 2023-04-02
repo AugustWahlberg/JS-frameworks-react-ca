@@ -16,7 +16,6 @@ export const CartItemsWrapper = styled.div`
   width: 100%;
 `;
 
-
 export const CartItem = styled.div`
   display: flex;
   max-width: 300px;
@@ -25,7 +24,7 @@ export const CartItem = styled.div`
   border-bottom: 1px solid #eee;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   margin: 20px;
-  padding-right:40px ;
+  padding-right: 40px;
 `;
 
 export const CartTitle = styled.h1`
@@ -36,13 +35,12 @@ export const CartTitle = styled.h1`
   text-align: center;
 `;
 
-
 export const CartItemImg = styled.img`
   margin-right: 20px;
   max-width: 200px;
   min-width: 120px;
   height: 240px;
- display: inline-block;
+  display: inline-block;
   vertical-align: middle;
   object-fit: cover;
 `;
@@ -80,8 +78,8 @@ export const CartActionButton = styled.button`
   padding: 8px 12px;
   text-align: center;
   text-decoration: none;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   font-size: 16px;
   cursor: pointer;
   margin-top: 10px;
@@ -104,18 +102,18 @@ export const CartActionButton = styled.button`
 export const CartBtnWrapper = styled.div`
   width: 120px;
   height: 100px;
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   padding-bottom: 8px;
 `;
 
 export const SummaryWrapper = styled.div`
-width: 100%;
-display: flex;
-justify-content: center;
-`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
 
 export const CartSummary = styled.div`
   display: flex;
@@ -126,7 +124,7 @@ export const CartSummary = styled.div`
   border-radius: 5px;
   width: 300px;
   background-color: #f8f8f8;
-  border: solid 1px black; 
+  border: solid 1px black;
   & > p span {
     font-weight: 600;
   }

@@ -1,5 +1,5 @@
 import React from "react";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import * as S from "./CheckoutSuccess.Styles";
 
 const CheckoutSuccess = () => {
@@ -7,7 +7,7 @@ const CheckoutSuccess = () => {
   const navigate = useNavigate();
 
   const handleBackToStore = () => {
-    navigate('/home');
+    navigate("/home");
   };
 
   return (

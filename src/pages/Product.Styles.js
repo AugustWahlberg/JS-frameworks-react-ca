@@ -8,7 +8,6 @@ export const Container = styled.div`
   flex-wrap: wrap;
   margin: 120px auto;
   justify-content: center;
-
 `;
 
 export const ProductTitle = styled.h1`
@@ -43,12 +42,11 @@ export const Rating = styled.p`
 `;
 
 export const Offer = styled.p`
- font-size: 18px;
+  font-size: 18px;
   margin: 10px;
   font-weight: 700;
-  color: #228b22 ;
-
-`
+  color: #228b22;
+`;
 
 export const Box = styled.div`
   width: 560px;
@@ -86,7 +84,6 @@ export const ProductImg = styled.img`
 export const Wrapper = styled.div`
   justify-content: space-between;
   display: flex;
-  
 `;
 
 export const ProductTags = styled.div`
@@ -152,7 +149,7 @@ export const AddedToCartMessage = styled.p`
   font-weight: bold;
   margin-top: 10px;
   background-color: #f8f8f8;
-  border: solid 1px black; 
+  border: solid 1px black;
   padding: 8px 24px;
 `;
 
@@ -161,7 +158,7 @@ export const AddWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 80px; 
+  height: 80px;
 `;
 
 export const AddBtn = styled(BaseButton)`

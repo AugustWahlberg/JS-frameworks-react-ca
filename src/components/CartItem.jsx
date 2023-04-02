@@ -14,26 +14,37 @@ const CartItem = ({ product }) => {
       <S.CartItemInfo>
         <S.CartItemTitle>{product.title}</S.CartItemTitle>
         <S.QuantityButtons>
-          <S.QuantityButton onClick={() => decreaseQuantity(product.id)}>-</S.QuantityButton>
-          <S.QuantityButton onClick={() => increaseQuantity(product.id)}>+</S.QuantityButton>
+          <S.QuantityButton onClick={() => decreaseQuantity(product.id)}>
+            -
+          </S.QuantityButton>
+          <S.QuantityButton onClick={() => increaseQuantity(product.id)}>
+            +
+          </S.QuantityButton>
         </S.QuantityButtons>
-        <S.CartItemText>Quantity: <span>{product.quantity} </span> </S.CartItemText>
-        <S.CartItemText>Price: <span> {product.price}$ </span> </S.CartItemText>
+        <S.CartItemText>
+          Quantity: <span>{product.quantity} </span>{" "}
+        </S.CartItemText>
+        <S.CartItemText>
+          Price: <span> {product.price}$ </span>{" "}
+        </S.CartItemText>
         <S.CartBtnWrapper>
-        <Link to={`/product/${product.id}`}>
-          <S.CartActionButton bgColor="#ece75f">
+          <Link to={`/product/${product.id}`}>
+            <S.CartActionButton bgColor="#ece75f">
+              <span>
+                <AiFillEye />
+              </span>{" "}
+              View
+            </S.CartActionButton>
+          </Link>
+          <S.CartActionButton
+            bgColor="#FFB3B3"
+            onClick={() => removeFromCart(product.id)}
+          >
             <span>
-              <AiFillEye />
+              <BsFillTrash3Fill />
             </span>{" "}
-            View
+            Delete
           </S.CartActionButton>
-        </Link>
-        <S.CartActionButton bgColor="#FFB3B3" onClick={() => removeFromCart(product.id)}>
-          <span>
-            <BsFillTrash3Fill />
-          </span>{" "}
-          Delete
-        </S.CartActionButton>
         </S.CartBtnWrapper>
       </S.CartItemInfo>
     </S.CartItem>

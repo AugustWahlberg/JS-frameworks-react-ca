@@ -45,9 +45,7 @@ export const Cart = () => {
       )}
 
       {cart.length > 0 ? (
-        cart.map((product) => (
-          <CartItem key={product.id} product={product} />
-        ))
+        cart.map((product) => <CartItem key={product.id} product={product} />)
       ) : (
         <S.EmptyCart>
           <p>Your cart is empty</p>

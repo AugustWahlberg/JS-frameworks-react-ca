@@ -8,7 +8,9 @@ export const CartProvider = ({ children }) => {
   const addToCart = (product) => {
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    const existingProductIndex = existingCart.findIndex((item) => item.id === product.id);
+    const existingProductIndex = existingCart.findIndex(
+      (item) => item.id === product.id
+    );
 
     if (existingProductIndex >= 0) {
       // If the product is already in the cart, increase its quantity
@@ -25,7 +27,9 @@ export const CartProvider = ({ children }) => {
 
   const removeFromCart = (productId) => {
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
-    const updatedCart = existingCart.filter((product) => product.id !== productId);
+    const updatedCart = existingCart.filter(
+      (product) => product.id !== productId
+    );
 
     setCart(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
@@ -33,12 +37,14 @@ export const CartProvider = ({ children }) => {
 
   const decreaseQuantity = (productId) => {
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
-    const updatedCart = existingCart.map((product) => {
-      if (product.id === productId) {
-        return { ...product, quantity: Math.max(0, product.quantity - 1) };
-      }
-      return product;
-    }).filter(product => product.quantity > 0);
+    const updatedCart = existingCart
+      .map((product) => {
+        if (product.id === productId) {
+          return { ...product, quantity: Math.max(0, product.quantity - 1) };
+        }
+        return product;
+      })
+      .filter((product) => product.quantity > 0);
 
     setCart(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
@@ -70,7 +76,16 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, decreaseQuantity, increaseQuantity, clearCart }}>
+    <CartContext.Provider
+      value={{
+        cart,
+        addToCart,
+        removeFromCart,
+        decreaseQuantity,
+        increaseQuantity,
+        clearCart,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );

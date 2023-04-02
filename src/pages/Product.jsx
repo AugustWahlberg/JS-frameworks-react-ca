@@ -6,7 +6,6 @@ import { AiFillStar } from "react-icons/ai";
 import { BsCartPlusFill } from "react-icons/bs";
 import { useCart } from "../components/CartContext.jsx";
 
-
 export function Product() {
   const { id } = useParams();
   const post = usePost(id);
@@ -57,8 +56,7 @@ export function Product() {
           <S.ProductDescription>{post.description}</S.ProductDescription>
 
           <S.Wrapper>
-
-          <div>
+            <div>
               {post.discountedPrice < post.price ? (
                 <>
                   <S.PriceDisplay style={{ textDecoration: "line-through" }}>
@@ -74,27 +72,26 @@ export function Product() {
                   </S.Offer>
                 </>
               ) : (
-                <S.PriceDisplay>
-                  {post.price}$
-                </S.PriceDisplay>
+                <S.PriceDisplay>{post.price}$</S.PriceDisplay>
               )}
             </div>
-      <S.AddWrapper>
-      <S.AddBtn
-        onClick={() => {
-          addToCartHandler(post);
-        }}
-      >
-        <span>
-          {" "}
-          <BsCartPlusFill />
-        </span>{" "}
-        Add to Cart
-      </S.AddBtn>
-      {addedToCart && <S.AddedToCartMessage>Added to cart</S.AddedToCartMessage>}
-      </S.AddWrapper>
-
-    </S.Wrapper>
+            <S.AddWrapper>
+              <S.AddBtn
+                onClick={() => {
+                  addToCartHandler(post);
+                }}
+              >
+                <span>
+                  {" "}
+                  <BsCartPlusFill />
+                </span>{" "}
+                Add to Cart
+              </S.AddBtn>
+              {addedToCart && (
+                <S.AddedToCartMessage>Added to cart</S.AddedToCartMessage>
+              )}
+            </S.AddWrapper>
+          </S.Wrapper>
 
           {post.reviews.length > 0 && (
             <>

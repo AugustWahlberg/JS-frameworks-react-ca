@@ -7,8 +7,8 @@ export const Container = styled.div`
   padding: 2rem;
   margin-top: 120px;
   background-color: #f8f8f8;
-  border: solid 1px black; 
-  Width: auto;
+  border: solid 1px black;
+  width: auto;
   max-width: 360px;
   margin: 120px auto;
 `;
