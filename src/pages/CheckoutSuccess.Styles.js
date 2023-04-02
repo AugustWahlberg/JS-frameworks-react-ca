@@ -8,12 +8,13 @@ export const Container = styled.div`
   margin-top: 120px;
   background-color: #f8f8f8;
   border: solid 1px black; 
-  width: 320px;
+  Width: auto;
+  max-width: 360px;
   margin: 120px auto;
 `;
 
 export const Heading = styled.h2`
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-bottom: 1rem;
 `;
 

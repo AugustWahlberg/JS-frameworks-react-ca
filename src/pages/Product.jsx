@@ -79,7 +79,7 @@ export function Product() {
                 </S.PriceDisplay>
               )}
             </div>
-      
+      <S.AddWrapper>
       <S.AddBtn
         onClick={() => {
           console.log(post);
@@ -93,6 +93,8 @@ export function Product() {
         Add to Cart
       </S.AddBtn>
       {addedToCart && <S.AddedToCartMessage>Added to cart</S.AddedToCartMessage>}
+      </S.AddWrapper>
+
     </S.Wrapper>
 
           {post.reviews.length > 0 && (

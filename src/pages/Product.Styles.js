@@ -75,13 +75,6 @@ export const BaseButton = styled.button`
   }
 `;
 
-export const AddBtn = styled(BaseButton)`
-  background-color: #90ee90;
-  padding: 12px 24px 12px 16px;
-  font-size: 16px;
-  max-height: 60px;
-`;
-
 export const ProductImg = styled.img`
  width: 100%;
  height: 600px;
@@ -93,8 +86,9 @@ export const ProductImg = styled.img`
 export const Wrapper = styled.div`
   justify-content: space-between;
   display: flex;
-  align-items: center;
+  
 `;
+
 export const ProductTags = styled.div`
   display: flex;
   font-size: 14px;
@@ -119,7 +113,7 @@ export const ReviewButton = styled.button`
   border: none;
   cursor: pointer;
   margin-left: 5px;
-  margin-top: 20px;
+
   padding: 10px;
 `;
 
@@ -153,9 +147,27 @@ export const ChevronUpIcon = styled(BsChevronUp)`
 `;
 
 export const AddedToCartMessage = styled.p`
-  color: green;
+  color: black;
   font-size: 14px;
   font-weight: bold;
   margin-top: 10px;
+  background-color: #f8f8f8;
+  border: solid 1px black; 
+  padding: 8px 24px;
+`;
+
+export const AddWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px; 
+`;
+
+export const AddBtn = styled(BaseButton)`
+  background-color: #90ee90;
+  padding: 12px 24px 12px 16px;
+  font-size: 16px;
+  max-height: 60px;
   display: block;
 `;

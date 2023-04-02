@@ -3,9 +3,11 @@ import * as S from "./Header.styles";
 import { BsCartPlusFill } from "react-icons/bs";
 import { ImHome } from "react-icons/im";
 import { IoIosContacts } from "react-icons/io";
+import { useLocation } from "react-router-dom";
 
 export function CustomLink({ href, children, ...props }) {
-  const path = window.location.pathname;
+  const location = useLocation();
+  const path = location.pathname;
 
   const icon =
     href === "/home" ? (
@@ -40,6 +42,7 @@ export function CustomLink({ href, children, ...props }) {
     </header>
   );
 }
+
 
 export function NavBar() {
   return (
