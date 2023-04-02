@@ -121,11 +121,11 @@ export const CartSummary = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f8f8f8;
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 5px;
   width: 300px;
+  background-color: #f8f8f8;
   border: solid 1px black; 
   & > p span {
     font-weight: 600;

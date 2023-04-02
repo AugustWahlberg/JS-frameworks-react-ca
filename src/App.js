@@ -4,12 +4,13 @@ import Contact from "./pages/Contact";
 import { Route, Routes } from "react-router-dom";
 import { Product } from "./pages/Product";
 import { Layout } from "./components/Layout";
-import { CartProvider } from "./components/CartContext"; // import CartProvider
-import { Cart } from "./pages/Cart"; // update import statement
+import { CartProvider } from "./components/CartContext";
+import { Cart } from "./pages/Cart";
+import CheckoutSuccess from "./pages/CheckoutSuccess"; // import CheckoutSuccess
 
 function App() {
   return (
-    <CartProvider> {/* wrap the Routes component with CartProvider */}
+    <CartProvider>
       <Layout>
         <div className="container">
           <Routes>
@@ -17,6 +18,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/product/:id" element={<Product />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout-success" element={<CheckoutSuccess />} /> {/* add new route */}
           </Routes>
         </div>
       </Layout>
