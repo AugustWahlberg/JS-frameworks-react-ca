@@ -6,7 +6,7 @@ export const Container = styled.div`
   flex-wrap: wrap;
   margin: 40px auto;
   margin-top: 140px;
-  max-width: 1000px;
+  max-width: 800px;
   justify-content: center;
 `;
 
@@ -21,11 +21,13 @@ export const CartItemsWrapper = styled.div`
 export const CartItem = styled.div`
   display: flex;
   width: 100%;
-  max-width: 400px;
-  padding: 10px;
+  max-width: 450px;
+  width: auto;
+  padding: 20px;
   border-bottom: 1px solid #eee;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   margin: 20px;
+  padding-right:40px ;
 `;
 
 export const CartTitle = styled.h1`
@@ -38,9 +40,13 @@ export const CartTitle = styled.h1`
 
 
 export const CartItemImg = styled.img`
-  width: 200px;
-
   margin-right: 20px;
+  max-width: 200px;
+  min-width: 120px;
+  height: 300px;
+ display: inline-block;
+  vertical-align: middle;
+  object-fit: cover;
 `;
 
 export const CartItemInfo = styled.div`
@@ -51,13 +57,17 @@ export const CartItemInfo = styled.div`
 
 export const CartItemTitle = styled.h4`
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
 `;
 
 export const CartItemText = styled.span`
-  font-size: 14px;
-  color: #999;
-  margin-top: 5px;
+  font-size: 16px;
+  color: #444444;
+  margin-top: 10px;
+
+  & > span {
+    font-weight: 600;
+  }
 `;
 
 export const CartItemPrice = styled.span`
@@ -95,7 +105,7 @@ export const CartActionButton = styled.button`
 
 export const CartBtnWrapper = styled.div`
   width: 120px;
-  height: 160px;
+  height: 100px;
   display: flex; 
   flex-direction: column; 
   justify-content: flex-end;
@@ -119,7 +129,9 @@ export const CartSummary = styled.div`
   border-radius: 5px;
   width: 300px;
   border: solid 1px black; 
-
+  & > p span {
+    font-weight: 600;
+  }
 `;
 
 export const CheckoutButton = styled.button`
@@ -136,6 +148,7 @@ export const CheckoutButton = styled.button`
   border-radius: 4px;
   color: black;
   font-weight: 800;
+  border: solid 1px black;
 
   :hover {
     background-color: black;
@@ -144,7 +157,7 @@ export const CheckoutButton = styled.button`
 `;
 
 export const EmptyCart = styled.div`
- display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -170,7 +183,8 @@ export const QuantityButton = styled.button`
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: bold;
   cursor: pointer;
   border-radius: 4px;
   margin: 0 3px;
@@ -181,6 +195,6 @@ export const QuantityButton = styled.button`
 `;
 
 export const QuantityText = styled.span`
-  font-size: 14px;
+  font-size: 19px;
   padding: 0 5px;
 `;

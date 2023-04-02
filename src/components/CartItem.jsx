@@ -13,12 +13,12 @@ const CartItem = ({ product }) => {
       <S.CartItemImg src={product.imageUrl} alt="product" />
       <S.CartItemInfo>
         <S.CartItemTitle>{product.title}</S.CartItemTitle>
-        <S.CartItemText>Quantity: {product.quantity}</S.CartItemText>
         <S.QuantityButtons>
           <S.QuantityButton onClick={() => decreaseQuantity(product.id)}>-</S.QuantityButton>
           <S.QuantityButton onClick={() => increaseQuantity(product.id)}>+</S.QuantityButton>
         </S.QuantityButtons>
-        <S.CartItemText>Price: {product.price}</S.CartItemText>
+        <S.CartItemText>Quantity: <span>{product.quantity} </span> </S.CartItemText>
+        <S.CartItemText>Price: <span> {product.price}$ </span> </S.CartItemText>
         <S.CartBtnWrapper>
         <Link to={`/product/${product.id}`}>
           <S.CartActionButton bgColor="#ece75f">

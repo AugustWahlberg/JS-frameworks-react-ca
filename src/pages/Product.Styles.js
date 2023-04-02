@@ -150,3 +150,11 @@ export const ChevronDownIcon = styled(BsChevronDown)`
 export const ChevronUpIcon = styled(BsChevronUp)`
   margin-left: 10px;
 `;
+
+export const AddedToCartMessage = styled.p`
+  color: green;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+`;

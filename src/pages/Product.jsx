@@ -11,6 +11,7 @@ export function Product() {
   const { id } = useParams();
   const post = usePost(id);
   const [showReviews, setShowReviews] = useState(false);
+  const [addedToCart, setAddedToCart] = useState(false);
 
   const { addToCart } = useCart();
 
@@ -20,6 +21,14 @@ export function Product() {
 
   const toggleReviews = () => {
     setShowReviews(!showReviews);
+  };
+
+  const addToCartHandler = (product) => {
+    addToCart(product);
+    setAddedToCart(true);
+    setTimeout(() => {
+      setAddedToCart(false);
+    }, 2000);
   };
 
   return (
@@ -48,7 +57,8 @@ export function Product() {
           <S.ProductDescription>{post.description}</S.ProductDescription>
 
           <S.Wrapper>
-            <div>
+
+          <div>
               {post.discountedPrice < post.price ? (
                 <>
                   <S.PriceDisplay style={{ textDecoration: "line-through" }}>
@@ -69,21 +79,21 @@ export function Product() {
                 </S.PriceDisplay>
               )}
             </div>
-            <S.AddBtn
-  onClick={() => {
-    console.log(post); // Add this line to log the product object
-    addToCart(post);
-    
-  }}
->
-  <span>
-    {" "}
-    <BsCartPlusFill />
-  </span>{" "}
-  Add to Cart
-</S.AddBtn>
-
-          </S.Wrapper>
+      
+      <S.AddBtn
+        onClick={() => {
+          console.log(post);
+          addToCartHandler(post);
+        }}
+      >
+        <span>
+          {" "}
+          <BsCartPlusFill />
+        </span>{" "}
+        Add to Cart
+      </S.AddBtn>
+      {addedToCart && <S.AddedToCartMessage>Added to cart</S.AddedToCartMessage>}
+    </S.Wrapper>
 
           {post.reviews.length > 0 && (
             <>

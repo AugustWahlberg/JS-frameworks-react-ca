@@ -28,7 +28,7 @@ export const Cart = () => {
       {cart.length > 0 && (
         <S.SummaryWrapper>
         <S.CartSummary>
-          <p>Total Price: ${getTotalPrice().toFixed(2)}</p>
+          <p>Total Price: <span>${getTotalPrice().toFixed(2)} </span> </p>
           <S.CheckoutButton>Checkout</S.CheckoutButton>
         </S.CartSummary>
         </S.SummaryWrapper>

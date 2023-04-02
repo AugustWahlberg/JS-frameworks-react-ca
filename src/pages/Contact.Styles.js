@@ -60,8 +60,10 @@ export const ContactBody = styled.p`
   max-width: 500px;
   margin: 2rem auto;
   padding: 2rem;
-  box-shadow: 0 0 10px rgba(236, 231, 95, 0.8);
   line-height: 1.6em;
+  background-color: #f8f8f8;
+  border: solid 1px black;
+  border-radius: 5px;
 `;
 
 export const Button = styled.button`
