@@ -57,6 +57,13 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
+  const clearCart = (callback) => {
+    const emptyCart = [];
+    setCart(emptyCart);
+    localStorage.setItem("cart", JSON.stringify(emptyCart));
+    callback && callback();
+  };
+
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCart(savedCart);
@@ -64,7 +71,7 @@ export const CartProvider = ({ children }) => {
 
   console.log("CartProvider rendered");
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, decreaseQuantity, increaseQuantity }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, decreaseQuantity, increaseQuantity, clearCart }}>
       {children}
     </CartContext.Provider>
   );
