@@ -4,9 +4,8 @@ export const Container = styled.div`
   border: 0;
   display: flex;
   flex-wrap: wrap;
-  margin: 40px auto;
-  margin-top: 140px;
-  max-width: 800px;
+  margin: 120px auto;
+  max-width: 500px;
   justify-content: center;
 `;
 
@@ -20,8 +19,7 @@ export const CartItemsWrapper = styled.div`
 
 export const CartItem = styled.div`
   display: flex;
-  width: 100%;
-  max-width: 450px;
+  max-width: 300px;
   width: auto;
   padding: 20px;
   border-bottom: 1px solid #eee;
@@ -32,7 +30,7 @@ export const CartItem = styled.div`
 
 export const CartTitle = styled.h1`
   font-size: 28px;
-  margin: 30px auto;
+  margin: 10px auto;
   display: block;
   width: 100%;
   text-align: center;
@@ -43,7 +41,7 @@ export const CartItemImg = styled.img`
   margin-right: 20px;
   max-width: 200px;
   min-width: 120px;
-  height: 300px;
+  height: 240px;
  display: inline-block;
   vertical-align: middle;
   object-fit: cover;

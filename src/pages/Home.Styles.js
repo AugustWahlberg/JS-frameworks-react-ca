@@ -5,8 +5,7 @@ export const Container = styled.div`
   background-color: ;
   display: flex;
   flex-wrap: wrap;
-  margin: 40px auto;
-  margin-top: 140px;
+  margin: 140px auto;
   justify-content: center;
   max-width: 1800px;
   min-height: 100vw;

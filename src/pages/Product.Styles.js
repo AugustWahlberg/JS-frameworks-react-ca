@@ -6,8 +6,9 @@ export const Container = styled.div`
   background-color: ;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 120px auto;
   justify-content: center;
+
 `;
 
 export const ProductTitle = styled.h1`

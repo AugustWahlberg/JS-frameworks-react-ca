@@ -14,8 +14,8 @@ export const Container = styled.div`
   border: 0;
   display: flex;
   flex-wrap: wrap;
-  margin: 40px auto;
-  margin-top: 140px;
+  margin: 0 auto;
+  margin-top: 120px;
   justify-content: center;
   max-width: 1800px;
 `;
@@ -48,7 +48,7 @@ export const TextArea = styled.textarea`
 
 export const ContactTitle = styled.h1`
   font-size: 28px;
-  margin: 30px auto;
+  margin: 10px auto;
   display: block;
   width: 100%;
   text-align: center;
