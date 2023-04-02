@@ -82,7 +82,6 @@ export function Product() {
       <S.AddWrapper>
       <S.AddBtn
         onClick={() => {
-          console.log(post);
           addToCartHandler(post);
         }}
       >

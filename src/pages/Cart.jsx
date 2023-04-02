@@ -10,18 +10,14 @@ export const Cart = () => {
   const [checkoutClicked, setCheckoutClicked] = React.useState(false);
 
   useEffect(() => {
-    console.log("Cart updated: ", cart);
     if (checkoutClicked && cart.length === 0) {
       navigate("/checkout-success");
       setCheckoutClicked(false);
     }
   }, [cart, navigate, checkoutClicked]);
 
-  console.log("Cart:", cart);
-
   const getTotalPrice = () => {
     return cart.reduce((total, product) => {
-      console.log("Product in cart:", product);
       const price = typeof product.price === "number" ? product.price : 0;
       return total + price * product.quantity;
     }, 0);
