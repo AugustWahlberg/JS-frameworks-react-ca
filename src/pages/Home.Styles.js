@@ -8,7 +8,7 @@ export const Container = styled.div`
   margin: 140px auto;
   justify-content: center;
   max-width: 1800px;
-  min-height: 100vw;
+
 `;
 
 export const ProductTitle = styled.h2`
