@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import * as S from "./Home.Styles";
 import { AiFillStar, AiFillEye } from "react-icons/ai";
-import { BsCartPlusFill } from "react-icons/bs";
 import { SearchBar } from "../components/SearchBar";
 import { Link } from "react-router-dom";
 import { usePosts } from "../api/getPosts";
